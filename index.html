@@ -1,23 +1,251 @@
 <html>
+    <style>
+        h1{
+            text-align: center; color: sienna;
+        }
+        h3{
+            text-align: center;
+        }
+        button{
+            padding: 1em; 
+            background-color:navajowhite;
+            border: none;
+            border-radius: 0.5em;
+        }
+        a{
+            text-decoration: none; margin: 1em;
+        }
+        button:hover{
+            background-color: papayawhip;
+        }
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            max-width: 1229px;
+        }
+        header {
+            padding: 60px;
+            color: white;
+            background-color: #3db0ca80;
+            text-align: center;
+            width: 100%;
+        } 
+        nav {
+            background-color: #0096b8;
+            overflow: auto;
+            text-align: left;
+            width: 100%;
+            font-size: 0.98em;
+        }
+
+        header a {
+            text-decoration:none;
+            color:white; 
+        }
+        header a:hover  {
+            padding: 1em;
+            background-color: #3aadc7;
+        }
+        header li {
+            display:inline;
+            padding: 1em; 
+        }
+
+        footer {
+            width: 100%;
+            color: white;
+            background-color: #00a2c680;
+            overflow: auto;
+            padding: 5px 60px 5px 60px;
+            position: relative;
+            text-align: center;
+            font-size: 1.2em;
+            
+        }
+        #content{
+            float: left;
+            width: 70%;
+        }
+        #content img{
+            width: 450px;
+        }
+        #content table img{
+            width: 150px;
+        }
+        #content table td{
+            width:30%;
+            padding:2em;
+            border-width: 1em;
+        }
+        .card, .boxprofile{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        aside{
+            width: 30%;
+            position: relative;
+            top:0px;
+            left: 50px;
+            float: right;
+        }
+        aside figure {
+            text-align: center;
+        }
+        aside p {
+            text-align: left;
+            text-indent: unset;
+        }
+        aside img {
+            width: 65%;
+        }
+        aside table th{
+            font-weight: bold;
+            color: rgb(28, 189, 253);
+            border-top-style: solid;
+            border-color: steelblue;
+            padding: 0.5em;
+        }
+        blockquote::before, blockquote::after, blockquote {
+            content: ' " ';
+            font-size: 19px;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:peru;
+            padding: 0em;
+        }
+        @media screen and (max-width: 1000px) {
+            header,footer, #content, aside, #content table td {
+                width: 100%;
+                padding: 0;
+            left:0px;
+            }
+            header h1{
+                font-size: 2.5em;
+                padding-top: 10%;
+            }
+            header p{
+                font-size: 75%;
+            }
+            h4{
+                font-size: 75%;
+            }
+            #content img{
+                max-width: 90%;
+            }
+            #content table img{
+                width: 100%;
+            }
+            nav{
+                font-size: 75%;
+            }
+        }
+    </style>
+
     <body>
-        <h3 style="text-align: center; color: sienna;">
-            Amelia Novita 
-        </h3>
-        <h4 style="text-align: center;"> 
-            1800016064
-        </h4>
-        <h4 style="text-align: center;">
-            Multimedia Online             
-        </h4>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button">
-                <div class="dd-menu">
-                    <a class= "dd-item" href="#">Pie Chart (Praktikum 1)</a>
-                    <a class= "dd-item" href="#"></a>
-                    <a class= "dd-item" href="#"></a>
-                    <a class= "dd-item" href="#"></a>
-                </div>
-            </button>
-        </div>
+        <header>
+            <h1>
+                Multimedia Online
+            </h1>
+            <h3> 
+                Dokumentasi Praktikum
+            </h3>
+            <nav>
+                <ul>
+                    <li><a href="#p1">Prak 1</a></li>
+                    <li><a href="#p2">Prak 2</a></li>
+                    <li><a href="#p3">Prak 3</a></li>
+                    <li><a href="#p4">Prak 4</a></li>
+                    <li><a href="#p5">Prak 5</a></li>
+                    <li><a href="#p6">Prak 6</a></li>
+                    <li><a href="#p7">Prak 7</a></li>
+                    <li><a href="#p8">Prak 8</a></li>
+                    <li><a href="#p9">Prak 9</a></li>
+                    <li><a href="#p10">Prak 10</a></li>
+                    
+                </ul>
+        </header>
+        <br><br>
+        <main>
+            <div id="content">
+                <article id="p1" class="card">
+                    <h2>Praktikum 1</h2>
+                    <img src="https://user-images.githubusercontent.com/62319865/96010085-9cce7e00-0e6b-11eb-820a-b2eb734059c1.PNG">
+                    <h4>Pie Chart dengan Canvas HTML5</h4>
+                    <p> Membuat Chart berbentuk Pie pada Canvas HTML5. 
+                        Tugas yang diberi memiliki kondisi kode yang blank dibeberapa bagian dan memiliki hasil seperti gambar diatas.
+                    </p>
+                    <a class= "item" href="https://github.com/amelianovita/mulon/blob/master/Praktikum_1_1800016064.html">lihat code...</a>
+                </article>
+
+            </div>
+            <aside>
+                <article class="boxprofile">
+                    <div class="profile">
+                        <h2>Author</h2>
+                        <figure>
+                            <img src="https://user-images.githubusercontent.com/62319865/96010408-f5058000-0e6b-11eb-9978-47bd3d57603d.png">
+                        </figure>
+                        <section>
+                            <h3> Data singkat</h3>
+                            <table>
+                                <tr>
+                                    <th>Nama</th>
+                                    <td>Amelia Novita</td>
+                                </tr>
+                                <tr>
+                                    <th>NIM</th>
+                                    <td>1800016064</td>
+                                </tr>
+                                <tr>
+                                    <th>Kelas</th>
+                                    <td>B</td>
+                                </tr>
+
+                            </table>
+                        </section>
+                    </div>
+                </article>
+                <article class="boxprofile">
+                    <div id="button">
+                        <blockquote>Tekan aku untuk quotes</blockquote>
+                    </div>
+                </article>
+                
+            </aside>
+        </main>
+
+        <footer>
+            <p>Terimakasih telah membaca</p>
+        </footer>
+
+        <script>
+            a = "Sehat itu mahal, jagalah selagi bisa ";
+            b = "Dengan tidak keluar rumah, kamu telah membantu negeri ini";
+            c = "Jangan spaneng, Semangat nugas";
+            d = "Bersih bersih corona pergi";
+            e = "Produktif dari rumah";
+            f = "Rumahku bentengku";
+            g = "Bernafaslah.. ";
+            h = "Rebahan, ngoding, rebahan, ngoding...";
+            i = "Mulai bingung nulis apaaa";
+            j = "Katakan Halloooo";
+            k = "Terlalu lekat dengan laptop, keluarlah";
+            l = "Masak apa hari ini..";
+            var items = Array(a, b, c, d, e, f, g, h, i, j, k, l);
+            var item = items[Math.floor(Math.random() * items.length)];
+            document.getElementById("button").onclick = function () { myFunction() };
+            function myFunction() {
+                for (const arrayItem of items) {
+                    document.getElementById("button").innerHTML = item;
+                    item = items[Math.floor(Math.random() * items.length)];
+                    return item;
+                }
+            }
+        </script>
+
     </body>
 </html>
