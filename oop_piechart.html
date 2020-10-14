@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas{
+                background-color: #ccc;
+            }
+            body{
+                margin:0;
+                overflow: hidden;
+            }
+        </style>
+
+    </head>
+    <body>
+        <canvas id="myCanvas"></canvas>
+<script>
+
+var obj=[];
+function startApp()
+{
+    myCanvas.start();   
+    drawPieChart([90,80,50,30]);
+}
+var myCanvas = {
+    canvas: document.getElementById('myCanvas'),
+    start: function(){
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        this.centerX = this.canvas.width/2;
+        this.centerY = this.canvas.height/2;
+        this.context = this.canvas.getContext('2d');      
+    }
+}
+
+//membuat pieChart
+function drawPieChart(data)
+{   var start= 0; //tambahan
+    var total = 0;//tambahan
+    var color =['red', 'yellow', 'green', 'blue', 'purple'];
+    for (t=0; t<data.length; t++){ //tambahan
+        total += data[t]; 
+        
+    }
+    for(var i=0; i<data.length; i++)
+    {
+        //cari nilai start dan end agar dapat menghasilkan pieChart
+        //tulis solusi Anda disini
+//dengan kata lain diminta mencari sudut awal(start) dan akhir(akhir) 
+        end = start+(Math.PI*2*(data[i]/total))
+        //end solusi
+       obj[i] = new drawPieSlice(myCanvas.centerX, myCanvas.centerY, 200, start, end, color[i]);
+       start +=Math.PI*2*(data[i]/total);//tambahan
+    }
+}
+function sumArray(total, num) {
+  return total + num;
+}
+//memuat lingkaran
+function drawPieSlice(centerX, centerY, radius, angleStart, angleEnd, color)
+{
+    var ctx = myCanvas.context;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);   
+    ctx.arc(centerX, centerY ,radius, angleStart, angleEnd);
+    ctx.closePath();
+    ctx.fill();
+    
+}
+//init app
+startApp();
+
+</script>
+    </body>
+</html>
